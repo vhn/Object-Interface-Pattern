@@ -9,7 +9,6 @@ codeunit 50106 ElectricEngine
     var
         this: Codeunit ElectricEngine;
     begin
-        BindSubscription(this);
         this.Construct(this);
     end;
 
@@ -18,6 +17,7 @@ codeunit 50106 ElectricEngine
         codeunitVariant: Variant;
         IEngineBinder: Codeunit IEngineBinder;
     begin
+        BindSubscription(this);
         codeunitVariant := this;
         IEngineBinder.OnBindInterfaceToImplementation(codeunitVariant, _bindingID);
     end;

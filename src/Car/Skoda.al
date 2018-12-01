@@ -10,7 +10,6 @@ codeunit 50102 Skoda
     var
         this: Codeunit Skoda;
     begin
-        BindSubscription(this);
         this.Construct(this);
     end;
 
@@ -19,6 +18,7 @@ codeunit 50102 Skoda
         CodeunitVariant: Variant;
         ICarBinder: Codeunit ICarBinder;
     begin
+        BindSubscription(this);
         CodeunitVariant := this;
         ICarBinder.OnBindInterfaceToImplementation(CodeunitVariant, _bindingID);
 

@@ -10,7 +10,6 @@ codeunit 50103 Tesla
     var
         this: Codeunit Tesla;
     begin
-        BindSubscription(this);
         this.Construct(this);
     end;
 
@@ -19,6 +18,7 @@ codeunit 50103 Tesla
         codeunitVariant: Variant;
         ICarBinder: Codeunit ICarBinder;
     begin
+        BindSubscription(this);
         codeunitVariant := this;
         ICarBinder.OnBindInterfaceToImplementation(codeunitVariant, _bindingID);
 
