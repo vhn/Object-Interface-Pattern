@@ -1,0 +1,46 @@
+codeunit 50102 Skoda
+{
+    EventSubscriberInstance = Manual;
+
+    var
+        _bindingID: Guid;
+        _engine: Codeunit IEngine;
+
+    trigger OnRun()
+    var
+        this: Codeunit Skoda;
+    begin
+        BindSubscription(this);
+        this.Construct(this);
+    end;
+
+    procedure Construct(this: Codeunit Skoda)
+    var
+        CodeunitVariant: Variant;
+        ICarBinder: Codeunit ICarBinder;
+    begin
+        CodeunitVariant := this;
+        ICarBinder.OnBindInterfaceToImplementation(CodeunitVariant, _bindingID);
+
+        //Default object state
+        _engine.Construct(Codeunit::GasolineEngine);
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::ICarBinder, 'OnGetTopSpeed', '', true, true)]
+    local procedure OnGetTopSpeed(var topSpeed: Decimal; bindingID: Guid)
+    begin
+        if (bindingID <> _bindingID) then
+            exit;
+
+        topSpeed := 200.00;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::ICarBinder, 'OnGetEngine', '', true, true)]
+    local procedure OnGetEngine(var engine: Codeunit IEngine; bindingID: Guid)
+    begin
+        if (bindingID <> _bindingID) then
+            exit;
+
+        engine := _engine;
+    end;
+}

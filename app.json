@@ -1,0 +1,24 @@
+{
+  "id": "bfab16a2-7e8e-4f93-9e21-343d9657b76b",
+  "name": "Object Interface Pattern",
+  "publisher": "Mikkel Mansa Vilhelmsen",
+  "brief": "",
+  "description": "Object oriented AL proof of concept",
+  "version": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "13.0.0.0",
+  "application": "13.0.0.0",
+  "idRange": {
+    "from": 50100,
+    "to": 50149
+  },
+  "target": "Extension",
+  "showMyCode": true
+}
