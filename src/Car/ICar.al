@@ -17,12 +17,23 @@ codeunit 50100 ICar
     var
         topSpeed: decimal;
     begin
-        _binder.OnGetTopSpeed(topSpeed, _binder.GetBindingID());
+        OnGetTopSpeed(topSpeed, _binder.GetBindingID());
         exit(topSpeed);
     end;
 
     procedure GetEngine(var engineOut: Codeunit IEngine)
     begin
-        _binder.OnGetEngine(engineOut, _binder.GetBindingID());
+        OnGetEngine(engineOut, _binder.GetBindingID());
+    end;
+
+    
+    [IntegrationEvent(false, false)]
+    procedure OnGetTopSpeed(var topSpeed: Decimal; bindingID: Guid)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    procedure OnGetEngine(var engine: Codeunit IEngine; bindingID: Guid)
+    begin
     end;
 }
