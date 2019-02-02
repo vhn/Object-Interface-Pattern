@@ -23,7 +23,7 @@ codeunit 50104 IEngine
 
 
     [IntegrationEvent(false, false)]
-    procedure OnGetHorsePower(var horsePower: Decimal; bindingID: Guid)
+    local procedure OnGetHorsePower(var horsePower: Decimal; bindingID: Guid)
     begin
     end;
 }

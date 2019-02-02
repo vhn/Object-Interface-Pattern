@@ -26,14 +26,14 @@ codeunit 50100 ICar
         OnGetEngine(engineOut, _binder.GetBindingID());
     end;
 
-    
+
     [IntegrationEvent(false, false)]
-    procedure OnGetTopSpeed(var topSpeed: Decimal; bindingID: Guid)
+    local procedure OnGetTopSpeed(var topSpeed: Decimal; bindingID: Guid)
     begin
     end;
 
     [IntegrationEvent(false, false)]
-    procedure OnGetEngine(var engine: Codeunit IEngine; bindingID: Guid)
+    local procedure OnGetEngine(var engine: Codeunit IEngine; bindingID: Guid)
     begin
     end;
 }
