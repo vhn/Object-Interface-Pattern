@@ -22,7 +22,7 @@ codeunit 50107 GasolineEngine
         IEngineBinder.OnBindInterfaceToImplementation(codeunitVariant, _bindingID);
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::IEngineBinder, 'OnGetHorsePower', '', true, true)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::IEngine, 'OnGetHorsePower', '', true, true)]
     local procedure OnGetTopSpeed(var horsePower: Decimal; bindingID: Guid)
     begin
         if (bindingID <> _bindingID) then

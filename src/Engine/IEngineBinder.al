@@ -65,9 +65,4 @@ codeunit 50105 IEngineBinder
     procedure OnBindInterfaceToImplementation(implementationCodeunit: Variant; var bindingIDOut: Guid)
     begin
     end;
-
-    [IntegrationEvent(false, false)]
-    procedure OnGetHorsePower(var horsePower: Decimal; bindingID: Guid)
-    begin
-    end;
 }

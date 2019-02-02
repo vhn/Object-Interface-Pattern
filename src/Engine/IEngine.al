@@ -17,7 +17,13 @@ codeunit 50104 IEngine
     var
         horsePower: decimal;
     begin
-        _binder.OnGetHorsePower(horsePower, _binder.GetBindingID());
+        OnGetHorsePower(horsePower, _binder.GetBindingID());
         exit(horsePower);
+    end;
+
+
+    [IntegrationEvent(false, false)]
+    procedure OnGetHorsePower(var horsePower: Decimal; bindingID: Guid)
+    begin
     end;
 }

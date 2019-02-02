@@ -65,14 +65,4 @@ codeunit 50101 ICarBinder
     procedure OnBindInterfaceToImplementation(implementationCodeunit: Variant; var bindingIDOut: Guid)
     begin
     end;
-
-    [IntegrationEvent(false, false)]
-    procedure OnGetTopSpeed(var topSpeed: Decimal; bindingID: Guid)
-    begin
-    end;
-
-    [IntegrationEvent(false, false)]
-    procedure OnGetEngine(var engine: Codeunit IEngine; bindingID: Guid)
-    begin
-    end;
 }

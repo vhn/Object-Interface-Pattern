@@ -26,7 +26,7 @@ codeunit 50103 Tesla
         _engine.Construct(Codeunit::ElectricEngine);
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::ICarBinder, 'OnGetTopSpeed', '', true, true)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::ICar, 'OnGetTopSpeed', '', true, true)]
     local procedure OnGetTopSpeed(var topSpeed: Decimal; bindingID: Guid)
     begin
         if (bindingID <> _bindingID) then
@@ -35,7 +35,7 @@ codeunit 50103 Tesla
         topSpeed := 400.00;
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::ICarBinder, 'OnGetEngine', '', true, true)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::ICar, 'OnGetEngine', '', true, true)]
     local procedure OnGetEngine(var engine: Codeunit IEngine; bindingID: Guid)
     begin
         if (bindingID <> _bindingID) then
