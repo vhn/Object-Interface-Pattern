@@ -13,3 +13,7 @@ All of this should work in NAV2016 and newer, including AppSource extensions, si
 
 Check out CarInterfaceConsumer.al first if you want to understand why this pattern can be useful.
 The TestPage.al has an action that will run the consumer so you can see it in action.
+
+## Update (29-11-19):
+Microsoft is solving this platform/language limitation officially: https://youtu.be/bRphFZEirMw?t=4152
+When they release it, this pattern should be considered 100% deprecated.
