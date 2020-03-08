@@ -14,6 +14,11 @@ All of this should work in NAV2016 and newer, including AppSource extensions, si
 Check out CarInterfaceConsumer.al first if you want to understand why this pattern can be useful.
 The TestPage.al has an action that will run the consumer so you can see it in action.
 
-## Update (29-11-19):
-Microsoft is solving this platform/language limitation officially: https://youtu.be/bRphFZEirMw?t=4152
-When they release it, this pattern should be considered 100% deprecated.
+Microsoft MVP Vjeko blogged about this repo, go read his post if you want more info:
+https://vjeko.com/2019/02/02/codeunit-interfaces-in-al/
+
+
+## Update:
+Microsoft is finally solving this platform/language limitation officially: https://youtu.be/bRphFZEirMw?t=4152
+It will be released in the BC16 Spring 2020 release at which point this pattern should be considered 100% deprecated:
+https://docs.microsoft.com/en-us/dynamics365-release-plan/2020wave1/dynamics365-business-central/al-interfaces
